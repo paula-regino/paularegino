@@ -1,5 +1,6 @@
-import img1 from '../assets/xtz250negra.webp';
-import img2 from '../assets/xtz250.png';
+import img1 from '../../../assets/xtz250negra.webp';
+import img2 from '../../../assets/xtz250.png';
+
 
 export const data = [
     {
@@ -27,5 +28,18 @@ export const data = [
         cilindrage: '1200cc',
         peso: '220kg',
         velocidad: '320km/h'
+    },
+    {
+        moto: {
+            id: 3,
+            image: img1,
+            title: 'Moto Xtreme 3'
+        },
+        title: 'Moto Xtreme 3',
+        descripcion: 'Diseñada para ofrecer la mejor experiencia de conducción.',
+        precio: '$15,000',
+        cilindrage: '1500cc',
+        peso: '250kg',
+        velocidad: '350km/h'
     }
 ];

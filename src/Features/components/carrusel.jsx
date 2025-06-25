@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import portada from '../assets/portada.jpg';
-import portada22 from '../assets/portada22.jpg';
-import portada3 from '../assets/portada3.png';
+import portada from '../../assets/portada.jpg';
+import portada22 from '../../assets/portada22.jpg';
+import portada3 from '../../assets/portada3.png';
 
 export function Carrusel() {
   return (

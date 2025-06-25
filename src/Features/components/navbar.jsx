@@ -1,9 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../App.css';
+import '../../App.css';
+import { useCart } from '../cart/hooks/Cartcontext';
 
-export function Navbar() {
+export function Navbar() { 
+  const { toggleCart, itemCount } = useCart();
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -33,7 +36,7 @@ export function Navbar() {
             </li>
           </ul>
           
-          {/* Barra de búsqueda (centrada) */}
+         
           <form className="d-flex mx-auto" role="search">
             <input 
               className="form-control me-2" 
@@ -46,10 +49,21 @@ export function Navbar() {
             </button>
           </form>
 
-          {/* Elementos a la derecha (Login y Carrito) */}
-          <div className="d-flex ms-3">
+
+          <div className="d-flex ms-3 align-items-center">
             <a className="nav-link" href="#">Login</a>
-            <a className="nav-link ms-3" href="#">Ver carrito</a>
+            <button
+              className="btn btn-outline-success ms-3 position-relative"
+              type="button"
+              onClick={toggleCart}
+            >
+              Ver carrito
+              {itemCount > 0 && (
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {itemCount}
+                </span>
+              )}
+            </button>
           </div>
         </div>
       </div>

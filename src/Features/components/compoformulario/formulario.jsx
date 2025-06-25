@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 export function Formulario() {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -12,10 +11,10 @@ export function Formulario() {
   const [errors, setErrors] = useState({});
 
   function showalert(type, title, text) {
-    alert(`${title}\n${text}`);
+    window.alert(`${title}\n${text}`);
   }
 
-  function validaciontiemReal(name, value) {
+  function validacionTiempoReal(name, value) {
     let error = '';
 
     switch (name) {
@@ -71,7 +70,7 @@ export function Formulario() {
       [name]: value
     }));
 
-    const error = validaciontiemReal(name, value);
+    const error = validacionTiempoReal(name, value);
     setErrors(prev => ({
       ...prev,
       [name]: error
@@ -81,7 +80,7 @@ export function Formulario() {
   function validateForm() {
     const newErrors = {};
     Object.keys(formData).forEach(key => {
-      const error = validaciontiemReal(key, formData[key]);
+      const error = validacionTiempoReal(key, formData[key]);
       if (error) newErrors[key] = error;
     });
 

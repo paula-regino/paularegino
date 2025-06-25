@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
+import '../../App.css';
 
 export function Footer() {
   return (
-    <footer className="bg-body-tertiary mt-5 py-4 border-top">
+    <footer className="bg-light mt-5 py-4 border-top">
       <div className="container-fluid">
         <div className="row">
           {/* Sección 1: Logo y descripción */}
@@ -14,8 +14,7 @@ export function Footer() {
               Encuentra repuestos y accesorios para tu vehículo con envíos rápidos y garantía.
             </p>
           </div>
-
-          {/* Sección 2: Enlaces rápidos (como el navbar) */}
+          {/* Sección 2: Enlaces rápidos */}
           <div className="col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Productos</h5>
             <ul className="list-unstyled">
@@ -24,7 +23,6 @@ export function Footer() {
               <li><a href="#" className="text-decoration-none text-muted">Repuestos</a></li>
             </ul>
           </div>
-
           {/* Sección 3: Contacto */}
           <div className="col-md-3 mb-4 mb-md-0">
             <h5 className="fw-bold">Contacto</h5>
@@ -33,8 +31,7 @@ export function Footer() {
               <li className="text-muted">Teléfono: +57 000 000 0000</li>
             </ul>
           </div>
-
-          {/* Sección 4: Redes sociales o acciones (como el navbar) */}
+          {/* Sección 4: Redes sociales */}
           <div className="col-md-3">
             <h5 className="fw-bold">Síguenos</h5>
             <div className="d-flex gap-3">
@@ -42,12 +39,9 @@ export function Footer() {
               <a href="#" className="text-decoration-none text-muted">Instagram</a>
               <a href="#" className="text-decoration-none text-muted">Twitter</a>
             </div>
-            {/* Botón de "Login" para consistencia con navbar */}
             <button className="btn btn-outline-primary mt-3">Login</button>
           </div>
         </div>
-
-        {/* Copyright (alineado con el navbar) */}
         <div className="text-center pt-3 text-muted">
           <small>© 2023 VoltajeXtreme. Todos los derechos reservados.</small>
         </div>

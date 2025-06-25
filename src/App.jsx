@@ -1,23 +1,31 @@
-import React from 'react';
-import { Navbar } from './components/navbar';
-import { Carrusel } from './components/carrusel';
-import { Home } from './components/home';
-import { Footer } from './components/footer'
-import { Informacion } from './cards/informacion'; // <-- Agrega esta línea
-import { Formulario } from './compoformulario/formulario'; // <-- Agrega esta línea
+import './Shared/styles/estilocarrito.css'
 
-function App() {
+import React from "react";
+
+
+import { Navbar } from "./Features/components/navbar";
+import { Carrusel } from "./Features/components/carrusel";
+import { Home } from "./Features/components/home";
+import { Footer } from "./Features/components/footer";
+import { Informacion } from "./Features/components/cards/informacion";
+import { Formulario } from "./Features/components/compoformulario/formulario";
+import { Cart } from "./Features/cart/components/cart";
+import { CartProvider } from './Features/cart/hooks/Cartcontext';
+
+export function LandingPage() {
   return (
-    <div>
+    <CartProvider>
       <Navbar />
-      <Carrusel />
-      <Home />
-      <Formulario /> 
-      <Informacion /> {/* <-- Agrega esta línea */}
-      <Footer />
-
-    </div>
+      <div className="container my-4">
+        <Carrusel />
+        <Informacion />
+        <Home />
+        <Formulario />
+        <Footer />
+      </div>
+      <Cart />
+    </CartProvider>
   );
 }
 
-export default App;
+export default LandingPage;
